@@ -1,0 +1,40 @@
+<?php
+$title = 'Exact-change Calculator';
+$this->headTitle($title);
+?>
+
+<section>
+    <header>
+        <h1><?php echo $this->escapeHtml($title); ?></h1>
+        <p><time pubdate datetime="2011-03-15"></time></p>
+    </header>
+    <p>This is a simple web application that, when given a monetary
+        amount, will calculate the minimum number of coins needed to
+        make that amount.</p>
+
+    <?php
+    $form = $this->form;
+    $form->setAttribute('action', $this->url('exact-change', array('action' => 'index')));
+    $form->prepare();
+
+    echo $this->form()->openTag($form);
+    echo $this->formHidden($form->get('id'));
+    echo $this->formRow($form->get('monetaryAmount'));
+    echo $this->formSubmit($form->get('submit'));
+    echo $this->form()->closeTag();
+
+    if (!$this->coinsString == null) {
+        echo "<hr>";
+        echo "<h2>Output:</h2>";
+        echo "<p>Minimum number of coins: <strong>$this->minNumCoins</strong></p>";
+        echo "<p>Coins required: <strong>$this->coinsString</strong></p>";
+        echo "<hr>";
+    }
+    ?>
+</section>
+
+
+
+
+
+
