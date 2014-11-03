@@ -37,8 +37,9 @@ Post installation
 Notes (TODO's)
 -----
 
-   1) Incomplete items includes a View Helper (exactChangeWidget) which can be used from any view script in the application: <?php echo $this->exactChangeWidget(); ?>
-   2) Time restrictions meant that the following could not be accomplished:
+   1. Incomplete items includes a View Helper (exactChangeWidget) which can be used from any view script in the application: <?php echo $this->exactChangeWidget(); ?>
+   
+   2. Time restrictions meant that the following could not be accomplished:
       * Custom HTML5 / CSS / SASS
       * Use JS to prevent the page from reloading e.g. AJAX, SPA.
       * JS form validation
